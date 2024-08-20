@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Favorite Movie</h1>
+            <p>Find movies based on your taste and watch them now!</p>
+            <form id="recommendationForm">
+                <input type="text" id="title" name="title" required placeholder="Enter Movie Title...">
+                <input type="submit" value="Get Recommendations">
+            </form>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+        <h2>Recommended For You</h2>
+        <div id="recommendations" class="movie-list"></div>
+    </section>
+</body>
+</html>
